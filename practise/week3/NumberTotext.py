@@ -23,7 +23,7 @@ left = len_num % 3
 
 #separate number
 for i in range(len_num+1) :
-    if 3*i <= len_num * 3 :
+    if 3*(i+1) <= len_num * 3 :
         num1 = number[3*i : 3*i+3]
         list.append(num1)
         num1 = 0
