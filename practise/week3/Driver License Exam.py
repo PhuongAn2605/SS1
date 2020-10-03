@@ -24,7 +24,7 @@ def main():
 
 ques_dic = [
    "Làn đường là gì?\nA. Là một phần của phần đường xe chạy được" 
-       "chia theo chiều dọc của đường, sử dụng cho xe chạy.\B. Là một phần của phần đường xe chạy được chia"
+       "chia theo chiều dọc của đường, sử dụng cho xe chạy.\nB. Là một phần của phần đường xe chạy được chia"
        "theo chiều dọc của đường, có bề rộng đủ cho xe chạy an toàn.\nC. Là đường cho xe ô tô chạy, dừng, đỗ an toàn.\nD.Tat ca",
 "Làn đường là gì?\nA. Là một phần của phần đường xe chạy được" 
        "chia theo chiều dọc của đường, sử dụng cho xe chạy.\B. Là một phần của phần đường xe chạy được chia"
