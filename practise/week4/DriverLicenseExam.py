@@ -28,17 +28,6 @@ def read_question():
     #print(selected_answer)
     print("Your answer: ", selected_answer)
     check_answer(selected_answer)
-    # write_answer(selected_answer)
-
-
-# def write_answer(selected_answer):
-#     f = open("answer.txt","a")
-#     count = 0
-#     for ans in selected_answer:
-#         count += 1
-#         f.write(count, ": ", ans, "\n")
-#     f.close()
-#     check_answer(selected_answer)
 
 
 def check_answer(selected_answer):
