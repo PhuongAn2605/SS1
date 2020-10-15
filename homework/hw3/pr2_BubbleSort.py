@@ -1,5 +1,5 @@
 def main():
-    arr = [3, 5, 23, 56, 78, 9]
+    arr = [10, 80, 23, 1, 78, 9]
     bubbleSort(arr)
     print(arr)
 
