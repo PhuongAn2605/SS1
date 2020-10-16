@@ -1,25 +1,50 @@
 def main():
     message = [37,39,29]
-    print(decrypt_message(7,11,17,message))
-    #print(modular_large_number(667, 937, 2537))
+    decrypted_mess_private = privatekey_decrypt_message(7,11,17,message)
+    print('Use private key: ',decrypted_mess_private)
+    message2 = []
+    for i in decrypted_mess_private:
+        message2.append(ord(i))
+    #decrypted_mess_public = publickey_decrypt_message(7, 11, 17, decrypted_mess_private)
+    print(message2)
+    public_key_mess = publickey_decrypt_message(7,11,17,message2)
+    print('Use public key: ', end='')
+    for j in public_key_mess:
+        print(j, end=' ')
 
 
-def decrypt_message(p,q,e, encrypted_message):
+def privatekey_decrypt_message(p,q,e, encrypted_message):
     n = p*q
     z = (p-1)*(q-1)
-    public_key = [n,e]
+    #public_key = [n,e]
     #print(public_key)
     d = calculate_modular(n,1,z)
     #print(d)
-    private_key = [n, d]
+    #private_key = [n, d]
     #print(private_key)
     decrypted_message = ""
     for c in encrypted_message:
         m = modular_large_number(c,d,n)
-        print(m)
+        #print(m)
         decrypted_message += chr(m)
-        print(m)
     return decrypted_message
+
+
+def publickey_decrypt_message(p,q,e, decrypted_message):
+    n = p * q
+    z = (p - 1) * (q - 1)
+    # public_key = [n,e]
+    # print(public_key)
+    d = calculate_modular(n, 1, z)
+    # print(d)
+    # private_key = [n, d]
+    # print(private_key)
+    encrypted_message = []
+    for m in decrypted_message:
+        c = modular_large_number(m, e, n)
+        # print(c)
+        encrypted_message.append(c)
+    return encrypted_message
 
 
 def calculate_modular(a,b,n):
