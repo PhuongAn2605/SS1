@@ -84,6 +84,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+        self.calcBtn.clicked.connect(self.calcTotal)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -102,13 +104,6 @@ class Ui_MainWindow(object):
         self.calcBtn.setText(_translate("MainWindow", "Total"))
         self.label_6.setText(_translate("MainWindow", "vnd"))
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        '''
-        Some setup of PyQt5
-        '''
-        # Event
-        self.calcBtn.clicked.connect(self.calcTotal)
 
     def calcTotal(self):
         print("Press button")
